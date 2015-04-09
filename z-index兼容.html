@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页标题</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!-- z-index的兼容性问题：给div设置absolute且z-index为-1，同级的img有个浮动，ie6不能把图片显示在背景上面；解决方案：去掉浮动或者给浮动元素加个定位。 -->
+</head>
+
+<body>
+	<div style="position:absolute; z-index:-99;background:#ccc;width:200px;height:300px;"></div>  
+    <img style="float:left;position:absolute;" src="http://image.zhangxinxu.com/image/study/s/s256/mm2.jpg" />
+    
+ 
+</body>
+</html>

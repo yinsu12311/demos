@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS简易日历</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+ <style type="text/css">
+/* #tab{ width:198px; margin:50px auto; background:#CCC;padding:10px;}
+ li{height: 60px;width: 60px; border:1px solid black;margin: 2px;float: left;line-height:30px;}
+.text{ background:#CCC; color:black;}
+ .active{color:#F36; background:#fff;}
+ul li{ list-style:none;}*/
+
+
+ div,ul,li,h2,p{ margin:0; padding:0;}
+body{ background:#D7E1DC;color:#FFF;}
+ul li{ list-style:none;}
+#tab{ width:258px; margin:50px auto; background:#CCC;padding:10px;}
+#tab ul li{ width:80px; height:80px; line-height:30px; float:left; border:1px solid black; margin:2px; text-align:center; background:#666;}
+.text{ background:#CCC; color:black;border: 1px solid yellow;}
+.text h2{ font-size:20px; line-height:25px;}
+.text p{ font-size:14px; line-height:20px;}
+#tab ul li.active{ color:#F36; background:#fff;}
+</style>
+ </style>
+ <script type="text/javascript">
+ 	window.onload=function(){
+ 		var arr=[ 
+ 		'一月',
+ 		'二月',
+ 		'三月',
+ 		'四月',
+ 		'五月',
+ 		'六月',
+ 		'七月',
+ 		'八月',
+ 		'九月',
+ 		'十月',
+ 		'十一月',
+ 		'十二月'
+ 		];
+ 		var oDiv=document.getElementById('tab');
+ 		var aLi=oDiv.getElementsByTagName('li');
+ 		var oTxt=oDiv.getElementsByTagName('div')[0];
+ 		for (var i = 0; i < aLi.length; i++) {
+ 			aLi[i].index=i;
+ 			aLi[i].onmouseover=function(){
+ 				for (var i = 0; i < aLi.length; i++) {
+ 					aLi[i].className='';
+ 				}
+ 				this.className='active';
+ 				oTxt.innerHTML='<h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'</p>';
+ 			};
+ 		} 
+ 	};
+ </script>
+<body>
+	<div id="tab" class="calendar">
+		<ul>
+			<li class="active"><h2>1</h2><p>January</p></li>
+			<li><h2>2</h2><p>February</p></li>
+			<li><h2>3</h2><p>March</p></li>
+			<li><h2>4</h2><p>April</p></li>
+			<li><h2>5</h2><p>May</p></li>
+			<li><h2>6</h2><p>June</p></li>
+			<li><h2>7</h2><p>July</p></li>
+			<li><h2>8</h2><p>August</p></li>
+			<li><h2>9</h2><p>September</p></li>
+			<li><h2>10</h2><p>October</p></li>
+			<li><h2>11</h2><p>November</p></li>
+			<li><h2>12</h2><p>December</p></li>
+		</ul>
+		<div class="text">
+			<h2>1月活动</h2>
+			<p>快过年了，大家可以商量着去哪儿玩吧~</p>
+		</div>
+	</div>
+</body>
+</html>

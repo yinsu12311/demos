@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页标题</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!-- 但凡用到缓冲要记得取整 ceil和floor -->
+</head>
+<style type="text/css">
+	#div1{
+		width: 100px;height: 100px;background: red;
+		position: absolute;left: 600px;top: 50px;
+	}
+</style>
+<script type="text/javascript">
+	function startMove(){
+		var oDiv=document.getElementById('div1');
+		setInterval(function(){
+			var speed=(300-oDiv.offsetLeft)/10;
+			speed=speed>0?Math.ceil(speed):Math.floor(speed);
+			oDiv.style.left=oDiv.offsetLeft+speed+'px';
+		},30);
+	}
+</script>
+<body>
+<input id="btn1" type="button" value="move" onclick="startMove()" />
+	<div id="div1"></div>
+</body>
+</html>

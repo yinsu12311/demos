@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>数码时钟</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!-- 数码时钟获取时间，月份的表示是0-11，故要加1；时间如果是个位的话前面要补足0；IE7不支持[]。故选择charAt来代替中括号； -->
+</head>
+<style type="text/css">
+	body{background: black;color: white;font-size: 50px;}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+		//var oDiv1=document.getElementById('time')
+		var aImg=document.getElementsByTagName('img');
+		function tick(){
+			var oDate=new Date();
+		var year = oDate.getFullYear();
+        var month = oDate.getMonth() + 1;
+        var day = oDate.getDate();
+        var h = oDate.getHours();
+        var m = oDate.getMinutes();
+        var s = oDate.getSeconds();
+		var str = year.toString()+(month<10?"0"+month:month).toString()+(day<10?"0"+day:day).toString()+(h < 10 ? "0" + h : h).toString() + (m < 10 ? "0" + m : m).toString() + (s < 10 ? "0" + s : s).toString() ;
+		for (var i = 0; i < aImg.length; i++) {
+			//aImg[i].src='image/'+str[i]+'.jpg';
+			aImg[i].src='image/'+str.charAt(i)+'.jpg';
+		};
+		}
+		setInterval(tick,1000);
+		tick();
+	};
+</script>
+<body>
+<div>
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	年
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	月
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	日
+</div>
+<div id="time">
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	:
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+	:
+	<img src="image/0.jpg">
+	<img src="image/0.jpg">
+</div>
+
+</body>
+</html>

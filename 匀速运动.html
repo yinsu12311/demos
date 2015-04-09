@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页标题</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!-- 匀速运动不比缓冲运动，不会准确的停在需要停止的位置上，需要加绝对值，大概到了那个位置即可 运动前要先加停止定时器，不然一直点按钮的话会打开多个定时器，导致速度加快-->
+</head>
+<style type="text/css">
+#div1{
+	height: 200px;width: 200px;background: red;
+	position: absolute;left: 50px;top: 50px;
+}
+</style>
+<script type="text/javascript">
+	
+		var timer=null;
+			function startMove(iTarget){
+				var oDiv1=document.getElementById('div1');
+				clearInterval(timer);
+				timer=setInterval(function(){
+					var speed=0;
+					if(oDiv1.offsetLeft<iTarget){
+						speed=7;
+					}else{
+						speed=-7;
+					}
+					if(Math.abs(iTarget-oDiv1.offsetLeft)<=7){
+						clearInterval(timer);
+						oDiv1.style.left=iTarget+'px';
+					}else{
+						oDiv1.style.left=oDiv1.offsetLeft+speed+'px';
+					}
+				},30);
+		};
+</script>
+<body>
+	<input id="btn1" type="button" value="move300" onclick="startMove(300)"/>
+	<div id="div1"></div>
+</body>
+</html>

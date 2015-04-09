@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页标题</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<script type="text/javascript" src="Ido.js"></script>
+	<script type="text/javascript" src="demo.js"></script>
+	<link rel="stylesheet" type="text/css" href="demo.css"/>
+	<!-- 同级div的外边距是不会叠加的，只会取最大的那个 -->
+</head>
+<style type="text/css">
+	#aaa{
+		width: 200px;height: 200px;border: 1px solid #ccc;
+		margin-bottom: 200px;
+	}
+	#bbb{
+		width: 200px;height: 200px;border: 1px solid #ccc;
+		margin-top: 50px;
+	}
+	.a{
+		border: 1px solid #ccc;
+		overflow: hidden;
+		margin-top: 190px;
+	}
+</style>
+<body>
+	
+		<div id="aaa">
+		<p class="red">段落</p>
+		<p class="red">段落</p>
+		<p class="red">段落</p>
+		</div >
+		<div class="a">
+			<div id="bbb">
+			<p class="red">段落</p>
+			<p class="red">段落</p>
+			<p class="red">段落</p>
+		</div >
+		</div>
+		
+	
+
+</body>
+</html>

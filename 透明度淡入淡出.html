@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页标题</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<!-- 透明度是有区分浏览器 IE下透明度设置的方法是：filter:alpha(opacity=opacityValue)，值为0~100； 其他的opacity: 0.3；值为0~1 -->
+
+</head>
+<style type="text/css">
+#div1{
+	height: 200px;width: 200px;background: red;
+	filter:alpha(opacity:30);opacity: 0.3;；
+}
+</style>
+<script type="text/javascript">
+window.onload=function(){
+	var oDiv1=document.getElementById('div1');
+	oDiv1.onmouseover=function(){
+		startMove(100);
+	};
+	oDiv1.onmouseout=function(){
+		startMove(30);
+	};
+};
+		var alpha=30;
+		var timer=null;
+		function startMove(iTarget){
+			var oDiv1=document.getElementById('div1');
+			clearInterval(timer);
+			timer=setInterval(function(){
+				var speed=0;
+				if(alpha<iTarget){
+					speed=10;
+				}else{
+					speed=-10;
+				}
+				if(alpha==iTarget){
+					clearInterval(timer);
+				}else{
+					alpha+=speed;
+					oDiv1.style.filter='alpha(opacity:'+alpha+')';
+					oDiv1.style.opacity=alpha/100;
+				}
+			},30);
+		};
+</script>
+<body>
+	<div id="div1"></div>
+</body>
+</html>

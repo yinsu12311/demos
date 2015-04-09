@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>网页标题</title>
+	<meta name="keywords" content="HTML">
+	<meta name="description" content="HTML">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+</head>
+<body>
+<table width="700" align="center">
+	<tr>
+		<td>
+			
+		
+
+	<form action="ok.html" method="get">
+	<fieldset>
+			<legend>交友注册</legend>
+		<table border="0" bordercolor="blue" cellspacing="0" cellpadding="10" width="600" align="center" rules="none">
+		<colgroup align="right"></colgroup>
+			<tr>
+				<td>用户名：</td>
+				<td ><input type="text" name="username" value="" size="5" maxlength="3" readonly="readonly" disabled="disabled" /></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td ><input type="password" name="pwd1" disabled="disabled" /></td>
+			</tr>
+			<tr>
+				<td>确定密码：</td>
+				<td ><input type="password" name="username" readonly="readonly" /></td>
+			</tr>
+			<tr>
+				<td>性别</td>
+				<td >
+				男<input type="radio" name="sex" value="男" checked="checked" />
+				女<input type="radio" name="sex" value="女"/>
+				</td>
+			</tr>
+			<tr>
+				<td>性别</td>
+				<td >
+				<fieldset width="">
+				<legend>请选择性别</legend>
+					<input type="radio" name="sex" value="男" id="man" />
+					<label for="man">男</label>
+					<input type="radio" name="sex" value="女" id="woman" />
+					<label for="woman">女</label>
+				</fieldset>
+				
+				</td>
+			</tr>
+			<tr>
+				<td>城市：</td>
+				<td >
+				<select name="cities">
+					<option value="福州">福州</option>
+					<option value="杭州">杭州</option>
+					<option value="上海">上海</option>
+					<option value="厦门" selected="selectde">厦门</option>
+					<option value="北京">北京</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>地区：</td>
+				<td >
+				<select name="cities">
+					<optgroup label="福州">
+						<option value="福清">福清</option>
+						<option value="江阴">江阴</option>
+						<option value="东肖" selected="selectde">东肖</option>
+					</optgroup>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>交友目的：</td>
+				<td >
+				<select name="target" size="3" multiple="multiple">
+						<option value="同行">同行</option>
+						<option value="恋爱">恋爱</option>
+						<option value="普通" selected="selectde">普通</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>爱好：</td>
+				<td >
+				<input type="checkbox" name="yishu" value="yi" />艺术
+				<input type="checkbox" name="tiyu" value="ti" />体育
+				<input type="checkbox" name="changge" value="chang" />唱歌
+				</td>
+			</tr>
+			<tr>
+				<td>照片上传：</td>
+				<td >
+				<input type="file" name="image" value="upload" />
+				</td>
+			</tr>
+			<tr>
+				<td>自我介绍</td>
+				<td >
+				<input type="hidden"s>
+				<textarea rows="5" cols="50"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<input type="submit" value="提交" />
+				<input type="reset" value="取消" />
+				<input type="button" value="显示" onclick="alert('ninhao')" />
+				<input type="image" src="10.bmp" />
+				</td>
+			</tr>
+		
+			
+		</table>
+		</fieldset>
+	</form>
+	</table>
+	</td>
+	</tr>
+	<table width="500" height="400" border="1" cellpadding="10">
+		<tr>
+			<td>
+				电影在这里显示
+				<br/>
+				<iframe src="ok.html" width="400" height="300"></iframe>
+			</td> 
+		</tr>
+	</table>
+</body>
+</html>
